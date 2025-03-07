@@ -1,8 +1,10 @@
-   .login-container {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-  }
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, #d9fe82, #ffffff); /* Light yellow to white */
+}
+
   
   .login-form {
     width: 50%;
@@ -11,20 +13,22 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
   }
 
   .login-card {
-    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    /* background: #ffffff; */
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for 3D effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .login-card:hover {
-    transform: scale(1.02); /* Slight zoom effect on hover */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   }
   
   .login-form h2 {
@@ -32,6 +36,7 @@
   }
   
   .login-form input {
+    height: 2.5rem;
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -41,7 +46,8 @@
   
   .send-otp, .login-btn {
     width: 100%;
-    padding: 10px;
+    height: 2.5rem;
+    padding: 5px;
     margin-top: 10px;
     background-color: #007bff;
     color: white;
@@ -77,21 +83,33 @@
   
   .login-image {
     width: 50%;
-    height: 100vh; /* Ensures it takes full viewport height */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e3f2fd;
-    padding: 20px; /* Adds space around the image */
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
-  }
-  
-  .login-image img {
-    width: 100%; /* Makes the image take full width of container */
-    height: auto; /* Maintains aspect ratio */
-    max-height: 95vh; /* Ensures image doesn't exceed viewport height */
-    object-fit: cover; /* Ensures the image fills the space properly */
-    border-radius: 20px;
-  }
-  
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-image {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-image img {
+  width: 100%;
+  height: auto;
+  max-height: 95vh;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+
   

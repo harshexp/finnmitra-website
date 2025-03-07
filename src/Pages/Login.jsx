@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../assets/css/login.css";
-import img from '../assets/images/curved6.jpg';
+import img from '../assets/images/login.png';
 
 const Login = () => {
     const [phone, setPhone] = useState("");
@@ -23,7 +23,8 @@ const Login = () => {
             {/* Left Section - Form with 3D Card Effect */}
             <div className="login-form">
                 <div className="login-card">
-                    <h2>Login</h2>
+                    <h2>Welcome Back</h2>
+                    <small>Login to continue</small>
                     <input
                         type="text"
                         placeholder="Enter phone number"

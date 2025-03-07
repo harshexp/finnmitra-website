@@ -1,7 +1,14 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import "../assets/css/registration.css";
 
 const Registration = () => {
+  const navigate = useNavigate();
+
+  const handleNextPage = () => {
+    navigate('/interest');
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     age: "",
@@ -105,7 +112,7 @@ const Registration = () => {
             <input type="number" name="vehicleCount" placeholder="How many vehicles do you own?" onChange={handleChange} required />
           </div>
 
-          <button type="submit" className="submit-btn">Save and Next</button>
+          <button type="submit" className="submit-btn" onClick={handleNextPage}>Save and Next</button>
         </form>
       </div>
     </div>

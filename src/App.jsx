@@ -8,6 +8,7 @@ import Header from './components/Header/Header';
 import Home from './Pages/Home';
 import LoginSection from './Pages/Login';
 import Registration from './Pages/RegistrationPage';
+import InterestPage from './Pages/Interest';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
 
 function AppContent() {
   const location = useLocation();
-  const hideHeaderRoutes = ["/login", "/registration"];
+  const hideHeaderRoutes = ["/login", "/registration", "/interest"];
 
   return (
     <>
@@ -29,6 +30,7 @@ function AppContent() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginSection />} />
         <Route path="/registration" element={<Registration/>} />
+        <Route path="/interest" element={<InterestPage/>} />
         <Route path="/shop" element={<div>Shop Page Coming Soon...</div>} />
       </Routes>
     </>
