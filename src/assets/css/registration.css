@@ -1,17 +1,17 @@
 /* Full-screen layout */
 .registration-page {
     width: 100vw;
-    height: 100vh;
+    height: 100vh; /* Fixed height for larger screens */
     padding-bottom: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Prevent scrolling on large screens */
     background-color: #f4f4f4;
 }
-  
+
 /* Background Image */
 .background-image {
     position: absolute;
@@ -21,13 +21,12 @@
     height: 45vh; /* Adjust height to control background area */
     background: url('../images/register.jpg') no-repeat center top;
     background-size: cover;
-    
+
     /* Rounded corners only at the bottom-left and bottom-right edges */
     border-bottom-left-radius: 20px;  
     border-bottom-right-radius: 20px;
 }
 
-  
 /* Form Container */
 .form-wrapper {
     margin-top: 10rem;
@@ -40,7 +39,7 @@
     text-align: center;
     z-index: 1;
 }
-  
+
 /* Form Row: 3 Columns */
 .form-row {
     display: grid;
@@ -48,16 +47,16 @@
     gap: 15px;
     margin-bottom: 15px;
 }
-  
-/* Input and Select Fields with Reduced Height */
+
+/* Input and Select Fields */
 .form-row input,
 .form-row select {
     width: 100%;
-    padding: 3px 8px; /* Reduced padding for smaller height */
-    height: 40px; /* Adjusted height */
+    padding: 3px 8px;
+    height: 40px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 14px; /* Adjusted font size */
+    font-size: 14px;
     background-color: #fff;
 }
 
@@ -93,7 +92,7 @@
     background-color: #0056b3;
 }
 
-/* Responsive Design */
+/* Responsive Design: Enable scrolling only for mobile */
 @media (max-width: 1024px) {
     .form-row {
         grid-template-columns: repeat(2, 1fr);
@@ -101,7 +100,23 @@
 }
 
 @media (max-width: 768px) {
+    /* Enable scrolling only in mobile view */
+    .registration-page {
+        overflow-y: auto;
+        height: auto;
+    }
+
+    .form-wrapper {
+        width: 95%;
+        padding: 15px;
+        margin-top: 5rem;
+    }
+
     .form-row {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .submit-btn {
+        width: 100%;
     }
 }
